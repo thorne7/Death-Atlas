@@ -38,6 +38,7 @@ router.post('/thoughts', async (req, res) => {
   }
 });
 
+
 // PUT to update a thought by its _id
 router.put('/thoughts/:thoughtId', async (req, res) => {
   const { thoughtId } = req.params;

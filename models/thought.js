@@ -57,7 +57,6 @@ thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });
 
-// Format the date in the desired way (optional)
 function dateFormat(timestamp) {
   return new Date(timestamp).toLocaleString();
 }

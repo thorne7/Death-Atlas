@@ -22,8 +22,7 @@ router.delete('/thoughts/:thoughtId/reactions/:reactionId', async (req, res) => 
     await Thought.findByIdAndUpdate(thoughtId, { $pull: { reactions: { reactionId } } }, { new: true });
     res.json({ message: 'Reaction removed successfully' });
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.status(500).json({ error: 'Failed to remove the reaction' });
   }
 });
-
 module.exports = router;

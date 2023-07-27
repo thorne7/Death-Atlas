@@ -7,4 +7,6 @@ const reactionSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now, get: (timestamp) => new Date(timestamp).toISOString() },
 });
 
+const Reaction = mongoose.model('Reaction', reactionSchema);
+
 module.exports = reactionSchema;
